@@ -259,42 +259,54 @@ La ruta principal se define mediante:
 
 ```python
 BASE_PATH = "/content/drive/Shareddrives/APISI/Database signals/Convocatoria aseo"
+```
 
 A partir de esta ruta se construyen las ubicaciones correspondientes a cada conjunto de datos:
 
+```python
 ECG_PATH = f"{BASE_PATH}/ECG_SPO2_DATA"
 EMG_PATH = f"{BASE_PATH}/EMG_DATA"
 KIN_PATH = f"{BASE_PATH}/KINEMATICS_DATA"
+```
 
 Estas rutas deben reemplazarse por las ubicaciones correspondientes en el entorno donde se ejecute el proyecto.
 
+```python
+BASE_PATH = r"C:\Users\Usuario\Documents\Tesis\Database signals\Convocatoria aseo"
+
+ECG_PATH = f"{BASE_PATH}/ECG_SPO2_DATA"
+EMG_PATH = f"{BASE_PATH}/EMG_DATA"
+KIN_PATH = f"{BASE_PATH}/KINEMATICS_DATA"
+```
+
+## Ejemplo en Windows
+
+```python
 BASE_PATH = r"C:\Users\Usuario\Documents\Tesis\Database signals\Convocatoria aseo"
 
 ECG_PATH = f"{BASE_PATH}/ECG_SPO2_DATA"
 EMG_PATH = f"{BASE_PATH}/EMG_DATA"
 KIN_PATH = f"{BASE_PATH}/KINEMATICS_DATA"
 
-Ejemplo en Windows
+```
 
-BASE_PATH = r"C:\Users\Usuario\Documents\Tesis\Database signals\Convocatoria aseo"
+## Ejemplo en Linux o macOS
 
-ECG_PATH = f"{BASE_PATH}/ECG_SPO2_DATA"
-EMG_PATH = f"{BASE_PATH}/EMG_DATA"
-KIN_PATH = f"{BASE_PATH}/KINEMATICS_DATA"
-
-Ejemplo en Linux o macOS
-
+```python
 BASE_PATH = "/home/usuario/Documents/Tesis/Database signals/Convocatoria aseo"
 
 ECG_PATH = f"{BASE_PATH}/ECG_SPO2_DATA"
 EMG_PATH = f"{BASE_PATH}/EMG_DATA"
 KIN_PATH = f"{BASE_PATH}/KINEMATICS_DATA"
+```
 
 También deben configurarse las rutas destinadas al almacenamiento de los resultados:
 
+```python
 KIN_RESULTS_PATH = f"{BASE_PATH}/Resultados_Kinematics"
 EMG_RESULTS_PATH = f"{BASE_PATH}/Resultados_EMG"
 ECG_RESULTS_PATH = f"{BASE_PATH}/Resultados_ECG_SPO2"
+```
 
 Nota: las rutas que comienzan con /content/drive/ corresponden al entorno de Google Colab y no funcionarán directamente en un entorno local.
 
@@ -314,6 +326,7 @@ La organización general de los datos utilizada por el proyecto es:
 ├── Resultados_ECG_SPO2/
 ├── Resultados_EMG/
 └── Resultados_Kinematics/
+```
 
 Los directorios de entrada contienen los registros originales, mientras que los directorios de resultados almacenan los productos derivados del procesamiento y análisis.
 
